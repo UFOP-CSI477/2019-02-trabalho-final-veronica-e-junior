@@ -8,24 +8,39 @@
     <title>Login</title>
   </head>
   <body>
+    <header>
+      <div class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="adote.html">Adote</a></li>
+          <li><a href="finaisFelizes.html">Finais Felizes</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </div>
+    </header>
     <form method="POST">
       <div class="login">
         <div class="box">
-          <label for="user">Nome do Usuário</label>
-          <input type="text" class="user" id="user" />
-          <br />
-          <label for="password">Senha</label>
-          <input type="password" class="password" id="password" />
-          <br />
-          <input type="checkbox" class="lembrar" id="lebrar" />
-          <label>Lembrar de mim</label>
-          <input type="button" value="Login" />
+          <div class="center">
+            <label for="user">Nome do Usuário</label>
+            <br />
+            <input type="text" class="user" id="user" />
+            <br />
+            <br />
+            <label for="password">Senha</label>
+            <br />
+            <input type="password" class="password" id="password" />
+            <br />
+            <br />
+            <input type="checkbox" class="lembrar" id="lebrar" />
+            <label>Lembrar de mim </label>
+            <input type="button" id="btnlogin" class="btnlogin" value="Login" />
+          </div>
         </div>
-        <div>
-          <label><a href="registar.html">Registar-se</a></label>
-          <label><a href="recuperarSenha.html">Perdeu a Senha</a></label>
+        <div class="center">
+          <label><a href="cadastro_usuario.html">Registre-se</a></label>
+          <label><a href="recuperarSenha.html">Esqueci a Senha</a></label>
           <br />
-          <label><a href="#">Volar Para</a></label>
         </div>
       </div>
     </form>
