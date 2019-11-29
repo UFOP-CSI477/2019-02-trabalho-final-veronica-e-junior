@@ -1,28 +1,101 @@
-/*começo navbar*/
-.navbar {
-  background-color: #ffffff;
-}
-.navbar ul li {
-  display: inline-flex;
-  list-style: none;
-  margin: 10px;
-  padding: 10px;
-}
-.navbar a {
-  text-decoration: none;
-  color: #ff80aa;
-  font-size: 18px;
-  font-style: bold;
-}
-.navbar {
-  text-align: right;
-  position: fixed;
-  top: 0;
-  left: 0;
+/*inicio nav*/
+.menu {
   width: 100%;
+  height: 50px;
+  background: #ff80aa;
+  font-family: "Arial";
 }
 
-/*fim navbar*/
+.menu ul {
+  list-style: none;
+  position: relative;
+}
+
+.menu ul li {
+  width: 150px;
+  float: left;
+}
+
+.menu a {
+  background-color: #ff80aa;
+  padding: 15px;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+}
+
+.menu a:hover {
+  background-color: #ffffff;
+  color: #ff80aa;
+}
+
+.menu ul ul {
+  position: absolute;
+  visibility: hidden;
+}
+
+.menu ul li:hover ul {
+  visibility: visible;
+}
+
+.menu ul ul li {
+  float: none;
+  border-bottom: solid 1px #ccc;
+}
+
+.menu ul ul li a {
+  background-color: #ff80aa;
+}
+
+label[for="bt_menu"] {
+  padding: 5px;
+  background-color: #ff80aa;
+  color: #fff;
+  font-family: "Arial";
+  text-align: center;
+  font-size: 30px;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  display: none;
+}
+
+#bt_menu {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  label[for="bt_menu"] {
+    display: block;
+  }
+
+  #bt_menu:checked ~ .menu {
+    margin-left: 0;
+  }
+
+  .menu {
+    margin-top: 5px;
+    margin-left: -100%;
+    transition: all 0.4s;
+  }
+
+  .menu ul li {
+    width: 100%;
+    float: none;
+  }
+  .menu ul ul {
+    position: static;
+    overflow: hidden;
+    max-height: 0;
+    transition: all 0.8s;
+  }
+  .menu ul li:hover ul {
+    height: auto;
+    max-height: 200px;
+  }
+}
+/*fim nav*/
 * {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
@@ -30,38 +103,33 @@
   padding: 0px;
 }
 
-.titulo{
-  color: #B03060;
-   background: transparent url('../images/finais_felizes.jpg');
-   border:  groove; 
-   border-width: 5px;
-   padding: 10px;
-   text-align: center;
-   height: 100px;
-   width:  430px;
-   margin: 0 auto;
-}
-
-h1{
-   -webkit-text-stroke-width: 1px; /* largura da borda */
-    -webkit-text-stroke-color: #000; /* cor da borda */
-   font-family: Brush Script MT, Brush Script Std, cursive ;
-   font-style: oblique;
-   color: #ff80aa;
-   font-size: 50px;
-
-
-
-
-}
-
-p{
-  -webkit-text-stroke-width: 0.4px; /* largura da borda */
-    -webkit-text-stroke-color: #000; /* cor da borda */
-  font-family: Arial Narrow, sans-serif  ;
-  color: #ff80aa;
-   -webkit-text-stroke-width: none;
-    font-size: 19px;
+.titulo {
+  color: #b03060;
+  background: transparent url("../images/finais_felizes.jpg");
+  border: groove;
+  border-width: 5px;
+  padding: 10px;
   text-align: center;
+  height: 100px;
+  width: 430px;
+  margin: 0 auto;
+}
 
+h1 {
+  -webkit-text-stroke-width: 1px; /* largura da borda */
+  -webkit-text-stroke-color: #000; /* cor da borda */
+  font-family: Brush Script MT, Brush Script Std, cursive;
+  font-style: oblique;
+  color: #ff80aa;
+  font-size: 50px;
+}
+
+p {
+  -webkit-text-stroke-width: 0.4px; /* largura da borda */
+  -webkit-text-stroke-color: #000; /* cor da borda */
+  font-family: Arial Narrow, sans-serif;
+  color: #ff80aa;
+  -webkit-text-stroke-width: none;
+  font-size: 19px;
+  text-align: center;
 }
