@@ -6,7 +6,11 @@
       <li><a href="">Animais para Adoção</a></li>
       <li><a href="">Finais Felizes</a></li>
       <li><a href="">Fale Conosco</a></li>
-      <li><a href="{{route('admin.login')}}">Login</a></li>
+      @if(Auth::guest())
+        <li><a href="{{route('admin.login')}}">Login</a></li>
+      @else
+      <li><a href="#">{{Auth::user()->name}}</a></li>
+      @endif
     </ul>
   </div>
   </div>
