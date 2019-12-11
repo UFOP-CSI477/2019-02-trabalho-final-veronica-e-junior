@@ -26,10 +26,7 @@ Route::get('/animal/{id}/{nome}',['as'=>'site.animal'], function(){
 
 
 Auth::routes();
-
 Route::get('/login', 'LoginController@index')->name('login');
-
-
 //rota login
 Route::get('admin/login', ['as'=>'admin.login', function(){
     return view('admin.login.index');

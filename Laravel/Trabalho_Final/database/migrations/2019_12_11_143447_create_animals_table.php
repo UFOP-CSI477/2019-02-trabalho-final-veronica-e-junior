@@ -18,11 +18,12 @@ class CreateAnimalsTable extends Migration
              $table->integer('user_dono_id')->unsignid();
             $table->foreign('user_dono_id')->references('id')->on('users');
             $table->VARCHAR('especie');
-            $table->VARCHAR('cep');
-            $table->VARCHAR('status');
+            $table->VARCHAR('sexo');
+          //  $table->VARCHAR('status');
             $table->VARCHAR('nome');
             $table->VARCHAR('descricao');
-            $table->VARCHAR('endereco');
+            $table->VARCHAR('cidade');
+            $table->VARCHAR('estado');
             $table->VARCHAR('cep');
             $table->timestamps();
         });
