@@ -11,9 +11,10 @@ class UsuarioController extends Controller
         $dados= $request->all();
        // dd($dados);
         if(Auth::attempt(['email'=>$dados['email'],'password'=>$dados['password']])){
-
+            \Session::flash('mensagem',['msg'=>'Login realizado com sucesso!','class'=>'green white-text']);
             return redirect()->route('site.home');
         }
+        \Session::flash('mensagem',['msg'=>'Erro! Email ou senha incorretos.','class'=>'red white-text']);
         return redirect()->route('admin.login');
     }
 }
