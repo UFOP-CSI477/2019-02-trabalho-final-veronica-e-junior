@@ -25,3 +25,9 @@ Route::get('admin/login', ['as'=>'admin.login', function(){
     return view('admin.login.index');
 }]);
 Route::post('admin/login', ['as'=>'admin.login', 'uses'=>'Admin\UsuarioController@login']);
+
+//rota perfil
+Route::get('admin/perfil', ['as'=>'admin.perfil', 'uses'=>'Admin\UsuarioController@perfil']);
+
+//rota para cadastrar novo usuario
+Route::get('admin/cadastrar', ['as'=>'admin.cadastrar', 'uses'=>'Admin\UsuarioController@cadastrar']);
