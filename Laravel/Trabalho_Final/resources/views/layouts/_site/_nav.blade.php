@@ -9,7 +9,7 @@
       @if(Auth::guest())
         <li><a href="{{route('admin.login')}}">Login</a></li>
       @else
-      <li><a href="#">{{Auth::user()->name}}</a></li>
+      <li><a href="{{route('admin.perfil')}}">{{Auth::user()->name}}</a></li>
       @endif
     </ul>
   </div>

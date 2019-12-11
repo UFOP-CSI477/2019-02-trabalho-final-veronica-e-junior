@@ -17,4 +17,13 @@ class UsuarioController extends Controller
         \Session::flash('mensagem',['msg'=>'Erro! Email ou senha incorretos.','class'=>'red white-text']);
         return redirect()->route('admin.login');
     }
+
+    public function perfil(){
+        //dd('oi');
+        return view('admin.perfil');
+    }
+
+    public function cadastrar(){
+        return view('admin.cadastrar');
+    }
 }
