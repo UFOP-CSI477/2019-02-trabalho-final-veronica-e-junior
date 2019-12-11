@@ -12,7 +12,7 @@ class UsuarioController extends Controller
        // dd($dados);
         if(Auth::attempt(['email'=>$dados['email'],'password'=>$dados['password']])){
 
-            return redirect()->route('admin.login');
+            return redirect()->route('site.home');
         }
         return redirect()->route('admin.login');
     }

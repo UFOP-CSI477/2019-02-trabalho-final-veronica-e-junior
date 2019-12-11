@@ -11,15 +11,15 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/', ['as'=>'site.home', function () {
     return view('site.home');
-});
+}]);
 
 Auth::routes();
 
 Route::get('/login', 'LoginController@index')->name('login');
 
-//junior
+
 //rota login
 Route::get('admin/login', ['as'=>'admin.login', function(){
     return view('admin.login.index');
