@@ -1,11 +1,13 @@
 <nav>
-    <div class="nav-wrapper">
-        <div class="container">
-            <a href="#" class="brand-logo">Logo</a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="sass.html">Área Aluno</a></li>
-                <li><a href="badges.html">Área Professor</a></li>
-            </ul>
-        </div>
-    </div>
+  <div class="nav-wrapper teal darken-1">
+  <div class="container">
+    <a href="/" class="brand-logo">Home</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li><a href="">Animais para Adoção</a></li>
+      <li><a href="">Finais Felizes</a></li>
+      <li><a href="">Fale Conosco</a></li>
+      <li><a href="{{route('admin.login')}}">Login</a></li>
+    </ul>
+  </div>
+  </div>
 </nav>

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.site')
 
 @section('content')
 
@@ -10,5 +10,6 @@
             <button class="btn blue">Entrar</button>
         </form>
     </div>
+    <br><br>
 
 @endsection
