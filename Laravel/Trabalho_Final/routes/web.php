@@ -15,6 +15,16 @@ Route::get('/', ['as'=>'site.home', function () {
     return view('site.home');
 }]);
 
+//temporiariamente inutilizado
+//Route::get('/fale_conosco',['as'=>'site.fale_conosco'], function(){
+	//return view('site.contato')
+//});
+
+
+Route::get('/animal/{id}/{nome}',['as'=>'site.animal'], function(){
+	return view('site.animal')
+
+
 Auth::routes();
 
 Route::get('/login', 'LoginController@index')->name('login');
