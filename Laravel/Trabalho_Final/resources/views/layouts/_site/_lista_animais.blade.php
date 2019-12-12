@@ -2,7 +2,7 @@
 	<h3 align="center">Animais para adoção</h3>
 	<div class="divider">
 		<br>
-		@include('layouts._site._filtros')
+		<!-- @include('layouts._site._filtros') -->
 	</div>
 </div>
 <div class="row section">

@@ -18,6 +18,8 @@ Route::get('/', ['as'=>'site.home', function () {
 
 
 
+Route::post('admin/busca', ['as'=>'site.busca', 'uses'=>'Site\HomeController@busca']);
+
 Auth::routes();
 
 Route::get('/login', 'LoginController@index')->name('login');
