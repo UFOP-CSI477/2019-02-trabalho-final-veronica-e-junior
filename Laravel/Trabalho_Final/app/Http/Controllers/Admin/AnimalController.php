@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Auth;
 use App\User;
 use App\Animal;
+use DB;
 
 class AnimalController extends Controller
 {
@@ -29,5 +30,15 @@ class AnimalController extends Controller
         $animal->cep = $dados['cep'];
         $animal->save();
         return redirect()->route('admin.perfil');
+    }
+
+    public function meusAnimais(){
+        $usuarioID = auth()->user()->id;
+        $animais = DB::table('animals')
+            ->where('user_dono_id', '=', $usuarioID)
+            ->get();
+            //dd($animais);
+
+        return view('admin.meusAnimais', compact('animais'));
     }
 }

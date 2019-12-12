@@ -8,6 +8,9 @@
             <button type="submit"class="btn blue"> 
                  <a class="grey-text text-lighten-3" href="{{route('admin.cadastrar-animal')}}">Colocar Animal para Adoção</a>
             </button>
+            <button type="submit"class="btn blue"> 
+                 <a class="grey-text text-lighten-3" href="{{route('admin.meus-animais')}}">Seu Histórico</a>
+            </button>
         </div>
         <br><br><br><br>
         <br><br><br><br><br>

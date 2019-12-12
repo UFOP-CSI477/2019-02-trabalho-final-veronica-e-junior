@@ -44,6 +44,10 @@ Route::get('admin/cadastrar-animal', ['as'=>'admin.cadastrar-animal', 'uses'=>'A
 //rota para salvar novo animal
 Route::post('admin/salvar-animal', ['as'=>'admin.salvar-animal', 'uses'=>'Admin\AnimalController@salvarAnimal']);
 
+//rota historico
+Route::get('admin/meus-animais', ['as'=>'admin.meus-animais', 'uses'=>'Admin\AnimalController@meusAnimais']);
+
+
 
 //rota para animal
 Route::get('/animal/{id}/{nome}',['as'=>'site.animal', function() {
