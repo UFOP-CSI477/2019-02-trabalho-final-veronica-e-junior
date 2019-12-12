@@ -20,11 +20,20 @@ class CreateAnimalsTable extends Migration
             $table->string('especie');
             $table->string('sexo');
           //  $table->VARCHAR('status');
+<<<<<<< HEAD
             $table->string('nome');
             $table->string('descricao');
             $table->string('cidade');
             $table->string('estado');
             $table->string('cep');
+=======
+            $table->string('imagem');
+            $table->VARCHAR('nome');
+            $table->VARCHAR('descricao');
+            $table->VARCHAR('cidade');
+            $table->VARCHAR('estado');
+            $table->VARCHAR('cep');
+>>>>>>> 142f5dba2d6cc7060c8a1c4d6791dcf342973dfd
             $table->timestamps();
         });
     }
