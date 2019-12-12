@@ -39,10 +39,10 @@ Route::get('admin/cadastrar', ['as'=>'admin.cadastrar', 'uses'=>'Admin\UsuarioCo
 Route::post('admin/salvar', ['as'=>'admin.salvar', 'uses'=>'Admin\UsuarioController@salvar']);
 
 //rota para colocar animal em adoção
-Route::get('admin/cadastrar-animal', ['as'=>'admin.cadastrar-animal', 'uses'=>'Admin\UsuarioController@cadastrarAnimal']);
+Route::get('admin/cadastrar-animal', ['as'=>'admin.cadastrar-animal', 'uses'=>'Admin\AnimalController@cadastrarAnimal']);
 
 //rota para salvar novo animal
-Route::post('admin/salvar-animal', ['as'=>'admin.salvar-animal', 'uses'=>'Admin\UsuarioController@salvarAnimal']);
+Route::post('admin/salvar-animal', ['as'=>'admin.salvar-animal', 'uses'=>'Admin\AnimalController@salvarAnimal']);
 
 
 //rota para animal

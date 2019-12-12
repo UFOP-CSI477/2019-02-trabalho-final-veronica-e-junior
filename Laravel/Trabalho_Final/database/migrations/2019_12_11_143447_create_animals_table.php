@@ -17,14 +17,14 @@ class CreateAnimalsTable extends Migration
             $table->increments('id');
             $table->integer('user_dono_id')->unsignid();
             $table->foreign('user_dono_id')->references('id')->on('users');
-            $table->VARCHAR('especie');
-            $table->VARCHAR('sexo');
+            $table->string('especie');
+            $table->string('sexo');
           //  $table->VARCHAR('status');
-            $table->VARCHAR('nome');
-            $table->VARCHAR('descricao');
-            $table->VARCHAR('cidade');
-            $table->VARCHAR('estado');
-            $table->VARCHAR('cep');
+            $table->string('nome');
+            $table->string('descricao');
+            $table->string('cidade');
+            $table->string('estado');
+            $table->string('cep');
             $table->timestamps();
         });
     }
