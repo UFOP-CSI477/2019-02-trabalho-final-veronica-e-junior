@@ -37,3 +37,6 @@ Route::get('admin/perfil', ['as'=>'admin.perfil', 'uses'=>'Admin\UsuarioControll
 
 //rota para cadastrar novo usuario
 Route::get('admin/cadastrar', ['as'=>'admin.cadastrar', 'uses'=>'Admin\UsuarioController@cadastrar']);
+
+//rota para salvar novo usuário
+Route::post('admin/salvar', ['as'=>'admin.salvar', 'uses'=>'Admin\UsuarioController@salvar']);
