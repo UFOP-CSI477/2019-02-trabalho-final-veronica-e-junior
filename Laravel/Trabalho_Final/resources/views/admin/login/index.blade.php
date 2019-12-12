@@ -10,7 +10,7 @@
                 @include('admin.login._form')
                 <button class="btn blue">Entrar</button>
             </form>
-            <br><br>
+            <br>
             <a href="{{route('admin.cadastrar')}}">Cadastra-se</a>
         </div>
         
