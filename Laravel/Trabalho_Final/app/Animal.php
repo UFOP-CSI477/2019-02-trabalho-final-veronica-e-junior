@@ -13,4 +13,8 @@ class Animal extends Model
      public function adotars(){
      	 return $this->hasMany(Adotar::class);
      }
+
+     protected $fillable = [
+        'user_dono_id', 'especie', 'sexo', 'nome', 'descricao','cidade', 'estado','cep',
+    ];
 }

@@ -17,9 +17,6 @@ Route::get('/', ['as'=>'site.home', function () {
 
 
 
-//Route::get('/animal/{id}/{nome}',['as'=>'site.animal'], function () {
-  //  return view('site.animal')
-//}]);
 
 Auth::routes();
 
@@ -38,3 +35,15 @@ Route::get('admin/cadastrar', ['as'=>'admin.cadastrar', 'uses'=>'Admin\UsuarioCo
 
 //rota para salvar novo usuário
 Route::post('admin/salvar', ['as'=>'admin.salvar', 'uses'=>'Admin\UsuarioController@salvar']);
+
+//rota para colocar animal em adoção
+Route::get('admin/cadastrar-animal', ['as'=>'admin.cadastrar-animal', 'uses'=>'Admin\UsuarioController@cadastrarAnimal']);
+
+//rota para salvar novo animal
+Route::post('admin/salvar-animal', ['as'=>'admin.salvar-animal', 'uses'=>'Admin\UsuarioController@salvarAnimal']);
+
+
+//rota para animal
+Route::get('/animal/{id}/{nome}',['as'=>'site.animal', function() {
+   return view('site.animal');
+}]);

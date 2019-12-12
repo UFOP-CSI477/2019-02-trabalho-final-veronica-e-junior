@@ -15,7 +15,7 @@ class CreateAnimalsTable extends Migration
     {
         Schema::create('animals', function (Blueprint $table) {
             $table->increments('id');
-             $table->integer('user_dono_id')->unsignid();
+            $table->integer('user_dono_id')->unsignid();
             $table->foreign('user_dono_id')->references('id')->on('users');
             $table->VARCHAR('especie');
             $table->VARCHAR('sexo');
