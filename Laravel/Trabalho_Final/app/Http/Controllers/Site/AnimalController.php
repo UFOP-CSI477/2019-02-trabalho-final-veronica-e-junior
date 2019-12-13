@@ -16,7 +16,7 @@ class AnimalController extends Controller
     	$seo = [
     		'nome'=>$animal->nome,
 			'descricao'=>$animal->descricao,
-			//'imagem'=>asset($animal->imagem),
+			'imagem'=>asset($animal->imagem),
 			'url'=> route('site.animal',[$animal->id,str_slug($animal->nome,'_')])
     	];
 
