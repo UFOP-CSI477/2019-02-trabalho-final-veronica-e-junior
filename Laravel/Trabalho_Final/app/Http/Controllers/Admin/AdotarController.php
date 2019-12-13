@@ -1,10 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Auth;
 use App\User;
 use App\Animal;
+use DB;
 use App\Adotar;
 
 class AdotarController extends Controller

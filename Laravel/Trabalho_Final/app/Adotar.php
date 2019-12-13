@@ -20,4 +20,9 @@ class Adotar extends Model
       public function finais_felizes(){
      	 return $this->HasOne(Finais_Felizes::class);
      }
+
+
+     protected $fillable = [
+        'user_dono_id', 'user_pedinte_id', 'animal_id'];
 }
+
