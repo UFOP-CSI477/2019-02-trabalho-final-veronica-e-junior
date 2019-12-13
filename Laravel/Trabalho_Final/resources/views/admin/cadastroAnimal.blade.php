@@ -15,6 +15,21 @@
                 <label>Nome:<label> 
             </div>
 
+            <div class="file-field input-field ">
+        <div class="btn">
+        <span>Imagem:</span>
+            <input type="file" name="imagem">
+        </div>
+        <div class="file-path-wrapper">
+            <input type="text" class="file-path validade">
+        </div>      
+    </div>
+    <!--<div class="col m6 s12">
+    @if(isset($pagina->imagem))
+        <img width="120" src="{{ asset($pagina->imagem) }}">
+    @endif
+    </div> -->
+
             <label>Espécie:<label>
             <p>
                 <label>
