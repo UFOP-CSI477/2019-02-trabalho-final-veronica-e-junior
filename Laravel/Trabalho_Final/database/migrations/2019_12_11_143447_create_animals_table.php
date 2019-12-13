@@ -27,7 +27,7 @@ class CreateAnimalsTable extends Migration
             $table->string('estado');
             $table->string('cep');
 
-            //$table->string('imagem');
+            $table->string('imagem');
 
             $table->timestamps();
         });

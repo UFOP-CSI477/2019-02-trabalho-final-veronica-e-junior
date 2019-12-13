@@ -30,7 +30,7 @@
         </div>
     </div>            <a class="btn deep-orange darken-1" href=" {{route('admin.pedir-adocao')}} ">Quero adotar!</a>
     <br>
-        </div>
+    </div>
     </div>
 
 
