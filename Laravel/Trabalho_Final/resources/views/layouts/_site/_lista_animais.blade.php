@@ -25,11 +25,11 @@
 
 <div class="row section">
 	<h3 align="center">Animais para adoção</h3>
-	<div class="divider"></div>
+	<!--<div class="divider"></div>-->
 	<br>
 	@include('layouts._site._filtros')
-</div>
-<div class="row section">
+<!--</div>
+<div class="row section">-->
 @foreach($animais as $animal)	
 	<div class="col s12 m3">
 		<div class="card">

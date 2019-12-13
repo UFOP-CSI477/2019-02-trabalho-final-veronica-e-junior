@@ -50,4 +50,5 @@ class AnimalController extends Controller
 
         return view('admin.meusAnimais', compact('animais'));
     }
+
 }
