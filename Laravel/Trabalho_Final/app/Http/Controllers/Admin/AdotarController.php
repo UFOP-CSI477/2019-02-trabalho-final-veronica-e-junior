@@ -9,7 +9,7 @@ use App\User;
 use App\Animal;
 use DB;
 use App\Adotar;
-use App\finais_felizes
+use App\finais_felizes;
 
 class AdotarController extends Controller
 {
@@ -27,6 +27,8 @@ class AdotarController extends Controller
 
 
         public function finalizar($id){
+            $dados = $id;
+            dd($dados);
            //Salva nos finais felizes
         $finais_felizes->user_id = $dados['user_id'];
         $finais_felizes->adocao_id = $dados['adocao_id'];
@@ -41,10 +43,10 @@ class AdotarController extends Controller
             $finais_felizes->imagem = $diretorio.'/'.$nomeArquivo;
         }
 
-       $finais_felizes->save();
+      // $finais_felizes->save();
         
        //Deleta da tabela de adotar
-        Adotar::find($id)->delete();
+      //  Adotar::find($id)->delete();
 
         //Precisa deletar de animais agora
 
