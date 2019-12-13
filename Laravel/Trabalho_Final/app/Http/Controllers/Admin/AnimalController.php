@@ -11,6 +11,15 @@ use DB;
 
 class AnimalController extends Controller
 {
+
+
+    public function index()
+    {
+        $animais = Animal::all();
+        return view('admin.imoveis.index',compact('animais'));
+    }
+
+
     public function cadastrarAnimal(){
         return view('admin.cadastroAnimal');
     }

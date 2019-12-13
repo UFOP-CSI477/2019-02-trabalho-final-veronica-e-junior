@@ -1,11 +1,12 @@
 <?php
 
-/*
+
 
 namespace App\Http\Controllers\Site;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Animal;
 
 class HomeController extends Controller
 {
@@ -13,12 +14,12 @@ class HomeController extends Controller
 
 	public function index()
     {
-    	$animais = Animal::All()->orderBy('id','desc')->paginate(20);
-    	$slides = Slide::where('publicado','=','sim')->orderBy('ordem')->get();
-    	$direcaoImagem = ['center-align','left-align','right-align'];
+    	$animais = Animal::All();
+    	//$slides = Slide::where('publicado','=','sim')->orderBy('ordem')->get();
+    	//$direcaoImagem = ['center-align','left-align','right-align'];
     	$paginacao = true;
 
-    	return view('site.home',compact('animais','slides','direcaoImagem','paginacao'));
+    	return view('site.home',compact('animais'));
     }
 
     public function busca(Request $request)

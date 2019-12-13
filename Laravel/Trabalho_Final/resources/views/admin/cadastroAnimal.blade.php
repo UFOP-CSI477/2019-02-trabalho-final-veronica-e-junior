@@ -11,7 +11,7 @@
             </div>
 
             <div class="input-field">
-                <input type="text" name="nome" class="validate" >
+                <input type="text" name="nome"  >
                 <label>Nome:<label> 
             </div>
 
@@ -44,16 +44,16 @@
             </p>
                 
             <div class="input-field">
-                <input type="text" name="descricao" class="validate" >
+                <input type="text" name="descricao" >
                 <label>Descrição:<label> 
             </div>
             <div class="input-field">
-                <input type="text" name="cidade" class="validate" >
-                <label>cidade:<label> 
+                <input type="text" name="cidade" >
+                <label>Cidade:<label> 
             </div>
 
             <!--Começo Estados usando radio -->
-            <label>Estado:<label>
+                        <label>Estado:<label>
             <p>
                 <label>
                     <input name="estado" type="radio" value="ES" />
@@ -94,9 +94,12 @@
             -->
             
             <div class="input-field">
-                <input type="text" name="cep" class="validate" >
+                <input type="text" name="cep" >
                 <label>Cep:<label> 
             </div>
+
+
+    <br><br>
             
             <button type="submit"class="btn blue">Cadastrar</button>
         </form>
