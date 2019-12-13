@@ -25,6 +25,7 @@
                 <p><b class="deep-orange-text darken-1">
                 <p><b>{{ $animal->nome }}</b></p>
                 <p>{{ $animal->descricao }}</p>
+                <p>{{ $animal->user_dono_id}}</p>
             </div>
         </div>
     </div>            <a class="btn deep-orange darken-1" href=" {{route('admin.pedir-adocao')}} ">Quero adotar!</a>
