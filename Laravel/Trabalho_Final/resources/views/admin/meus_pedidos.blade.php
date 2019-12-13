@@ -14,14 +14,15 @@
         </thead>
 
         <tbody>
-          <!-- Tem que mudar aq 
+          <!-- Tem que mudar aq -->
             @foreach($animais as $animal)
                 <tr scope="row">
                     <td>{{$animal->id}}</td>
                     <td>{{$animal->nome}}</td>
-                    seria interessante add um atributo chamado status na nossa tabela adota, que ai apareceria (em espera) ou algo do tipo pra pessoa que ta pedindo adoção
+                    seria interessante add um atributo chamado status na nossa tabela adota, 
+                    que ai apareceria (em espera) ou algo do tipo pra pessoa que ta pedindo adoção
                 </tr>
-            @endforeach -->
+            @endforeach 
         </tbody>
       </table>
     </div>

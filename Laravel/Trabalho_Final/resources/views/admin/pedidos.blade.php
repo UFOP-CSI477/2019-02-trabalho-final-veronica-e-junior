@@ -14,14 +14,14 @@
         </thead>
 
         <tbody>
-          <!-- Tem que mudar aq 
+          <!-- Tem que mudar aq -->
             @foreach($animais as $animal)
                 <tr scope="row">
                     <td>{{$animal->id}}</td>
                     <td>{{$animal->nome}}</td>
                     colocar o email de quem ta pedindo pra adotar
                 </tr>
-            @endforeach -->
+            @endforeach 
         </tbody>
       </table>
     </div>
