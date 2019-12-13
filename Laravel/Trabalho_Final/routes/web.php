@@ -70,7 +70,7 @@ Route::get('admin/cadastrar-final', ['as'=>'admin.cadastrar-final', 'uses'=>'Adm
 //rota para salvar novo final
 Route::post('admin/salvar-final', ['as'=>'admin.salvar-final', 'uses'=>'Admin\FinaisController@salvarFinal']);
 
-Route::get('admin/permitir/{id}', ['as'=>'admin.animal.finalizaradocao', 'uses'=>'Admin\AdotarController@finalizar']);
+Route::get('admin/permitir/{id}/{animal_id}', ['as'=>'admin.animal.finalizaradocao', 'uses'=>'Admin\AdotarController@finalizar']);
 
 Route::get('admin/editar-animal/{id}', ['as'=>'admin.editar-animal', 'uses'=>'Admin\AnimalController@editar']);
 
