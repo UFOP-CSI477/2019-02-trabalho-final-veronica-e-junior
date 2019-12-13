@@ -28,7 +28,17 @@ class AdotarController extends Controller
 
         public function finalizar($id){
             $dados = $id;
-            dd($dados);
+            //dd($dados);
+
+            $animais = DB::table('adotars')
+            ->where('adotars.id', '=', $dados)
+            ->join('users', 'adotars.user_pedinte_id', '=', 'users.id')
+            ->join('animals', 'adotars.animal_id', '=', 'animals.id')
+            ->select( 'adotars.id', 'animals.id as animal_id', 'users.id as user_id')
+            ->get();
+            //dd($animais);
+
+
            //Salva nos finais felizes
         $finais_felizes->user_id = $dados['user_id'];
         $finais_felizes->adocao_id = $dados['adocao_id'];
