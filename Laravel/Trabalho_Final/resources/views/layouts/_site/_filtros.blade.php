@@ -1,29 +1,34 @@
-<div class="row">
-	<form action="{{route('site.busca')}}" >
-		<div class="input-field col s6 m4">
-			<select name="sexo">
-				<option {{ isset($busca['sexo']) && $busca['sexo'] == 'ambos' ? 'selected' : '' }} value="ambos">Ambos</option>
-				<option {{ isset($busca['sexo']) && $busca['sexo'] == 'fema' ? 'selected' : '' }} value="fema">Fêmea</option>
-				<option {{ isset($busca['sexo']) && $busca['sexo'] == 'macho' ? 'selected' : '' }} value="macho">Macho</option>
-			</select>
-			<label>Sexo</label>
-		</div>
+<div class="container">
+    <label>Busque pela cidade</label>
+    <form action="{{route('site.busca')}}" method="POST" class="form-inline my-3 my-lg-0">
+      {{ csrf_field() }}
+      <input class="form-control mr-2" style="width: 30%" name="texto" type="text" placeholder="Buscar" aria-label="Search">
 
-		<div class="input-field col s6 m4">
-			<select name="especie">
-				<option {{ isset($busca['especie']) && $busca['especie'] == 'ambos' ? 'selected' : '' }} value="ambos">Ambos</option>
-				<option {{ isset($busca['especie']) && $busca['especie'] == 'fema' ? 'selected' : '' }} value="fema">Gato</option>
-				<option {{ isset($busca['especie']) && $busca['especie'] == 'macho' ? 'selected' : '' }} value="macho">Cachorro</option>
-			</select>
-			<label>Espécie</label>
-		</div>
-		
-		<div class="input-field col s12 m3">
-			<input class="validate" type="text" name="cidade" value="{{ isset($busca['cidade'])  ? $busca['cidade'] : '' }}">
-			<label>Cidade</label>
-		</div> 
-		<div class="input-field col s12 m2">
-			<button class="btn deep-range darken-1 right">Filtrar</button>
-		</div>
-	</form>
-</div>
+         
+                <label>
+                    <input class="especie" name="especie" type="radio" value="cachorro" />
+                    <span>Cães</span>
+                </label>
+            
+                <label>
+                    <input class="especie" name="especie" type="radio" value="gato"/>
+                    <span>Gatos</span>
+                </label>
+          
+            
+          
+                <label>
+                    <input class="sexo" name="sexo" type="radio" value="femea" />
+                    <span>Fêmeas</span>
+                </label>
+           
+                <label>
+                    <input class="sexo" name="sexo" type="radio" value="macho"/>
+                    <span>Machos</span>
+                </label>
+          
+
+      <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Filtrar</button>
+    </form>
+  </div>
+  <br><br>

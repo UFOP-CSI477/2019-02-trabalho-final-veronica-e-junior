@@ -15,7 +15,7 @@ Route::get('/',['as'=>'site.home', 'uses'=>'Site\HomeController@index']);
 
 
 
-Route::get('/busca',['as'=>'site.busca', 'uses'=>'Site\HomeController@busca']);
+Route::post('/busca',['as'=>'site.busca', 'uses'=>'Site\HomeController@busca']);
 
 Auth::routes();
 

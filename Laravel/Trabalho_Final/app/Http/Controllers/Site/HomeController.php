@@ -23,50 +23,12 @@ class HomeController extends Controller
 
     public function busca(Request $request)
     {
-    	$busca = $request->all();
-    	
-
-    	if($busca['especie'] == 'todos'){
-    		$testeespecie = [
-    			['especie','<>',null]
-    		];
-    	}else{
-    		$testeespecie = [
-    			['especie','=',$busca['especie']]
-    		];
-    	}
-    	if($busca['sexo'] == 'ambos'){
-    		$testeSexo = [
-    			['sexo','<>',null]
-    		];
-    	}else{
-    		$testeSexo = [
-    			['se
-
-    			/*xo','=',$busca['sexo']]
-    		];
-   /* 	}
-    	if($busca['cidade_id'] == 'todos'){
-    		$testeCidade = [
-    			['cidade_id','<>',null]
-    		];
-    	}else{
-    		$testeCidade = [
-    			['cidade_id','=',$busca['cidade_id']]
-    		];
-    	} */
+      $animais = Animal::where('cidade', 'LIKE', '%'.$request->texto.'%')->where('especie', 'LIKE', '%'.$request->especie.'%')->where('sexo', 'LIKE', '%'.$request->sexo.'%')->get();
+    return view('site.busca',compact('animais'));
     	
 
 
-    	$animais = Animais::where($testeespecie)->where($testeSexo)
-        //->where($testeCidade)
-    	
-    	
-    	->orderBy('id','desc')->get();
-
-
-
-    	return view('site.busca',compact('busca','animais'));
+    	$animais = Animais::where($testeespecie)->where($testeSexo)->get();
+        //->where($testeCidade)->orderBy('id','desc')->get();
     }
-}
 }
