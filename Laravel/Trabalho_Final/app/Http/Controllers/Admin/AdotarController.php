@@ -28,15 +28,18 @@ class AdotarController extends Controller
 
         public function finalizar($id){
             $dados = $id;
-            //dd($dados);
+          //  dd($dados);
 
-            $animais = DB::table('adotars')
+           /* $animais = DB::table('adotars')
             ->where('adotars.id', '=', $dados)
             ->join('users', 'adotars.user_pedinte_id', '=', 'users.id')
             ->join('animals', 'adotars.animal_id', '=', 'animals.id')
             ->select( 'adotars.id', 'animals.id as animal_id', 'users.id as user_id')
             ->get();
-            //dd($animais);
+
+            $finais_felizes->user_id = $animais->user_id;
+            
+            dd($finais_felizes);
 
 
            //Salva nos finais felizes
@@ -53,13 +56,14 @@ class AdotarController extends Controller
             $finais_felizes->imagem = $diretorio.'/'.$nomeArquivo;
         }
 
-      // $finais_felizes->save();
+         $finais_felizes->save();*/
         
        //Deleta da tabela de adotar
-      //  Adotar::find($id)->delete();
+        Adotar::find($dados)->delete(); 
+        return redirect()->route('admin.pedidos');
 
         //Precisa deletar de animais agora
 
-        return redirect()->route('admin.cadastrarfinaisfelizes');
+        //return redirect()->route('admin.cadastrarfinaisfelizes');
     }
 }
