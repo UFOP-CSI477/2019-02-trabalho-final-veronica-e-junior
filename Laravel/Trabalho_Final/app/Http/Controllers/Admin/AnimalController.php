@@ -86,4 +86,9 @@ class AnimalController extends Controller
         return view('admin.meus_pedidos', compact('animais'));
     }
 
+    public function finalizar($id){
+           Animal::find($id)->delete();
+        return redirect()->route('admin.cadastrarfinaisfelizes');
+    }
+
 }
