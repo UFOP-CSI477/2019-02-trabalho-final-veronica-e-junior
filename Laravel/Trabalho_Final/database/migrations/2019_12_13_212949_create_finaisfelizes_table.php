@@ -1,9 +1,3 @@
-<?php
-
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Database\Migrations\Migration;
-
 class Finaisfelizes extends Migration
 {
     /**
@@ -17,6 +11,7 @@ class Finaisfelizes extends Migration
             $table->string('descricao');
             $table->string('imagem');
             $table->timestamps();
+              });
     }
 
     /**

@@ -65,7 +65,10 @@ Route::get('admin/permitir', ['as'=>'admin.animal.finalizaradocao', 'uses'=>'Adm
 
 //finais_felizes
 
-Route::get('/finaisfelizes',['as'=>'finais.felizes', 'uses'=>'Site\FinaisController@index']);
+Route::get('admin/cadastrar-final', ['as'=>'admin.cadastrar-final', 'uses'=>'Admin\FinaisController@cadastrarFinal']);
+
+//rota para salvar novo final
+Route::post('admin/salvar-final', ['as'=>'admin.salvar-final', 'uses'=>'Admin\FinaisController@salvarFinal']);
 
 Route::get('admin/permitir/{id}', ['as'=>'admin.animal.finalizaradocao', 'uses'=>'Admin\AdotarController@finalizar']);
 

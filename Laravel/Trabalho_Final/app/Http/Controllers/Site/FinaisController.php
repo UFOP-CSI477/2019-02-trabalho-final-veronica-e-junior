@@ -13,7 +13,6 @@ class FinaisController extends Controller
     	  	$finais = Finais_Felizes::find($id);
 
     	$seo = [
-    		'nome'=>$finais->nome,
 			'descricao'=>$finais->descricao,
 			'imagem'=>asset($finais->imagem),
     	];
