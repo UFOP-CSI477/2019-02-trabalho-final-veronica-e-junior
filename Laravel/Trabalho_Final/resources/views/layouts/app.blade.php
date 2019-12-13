@@ -15,7 +15,7 @@
 
     <link rel="stylesheet" type="text/css" href="{{asset('lib/materialize/dist/css/materialize.css')}}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Não compre, Adote!</title>
 
 
     <!-- Styles -->
