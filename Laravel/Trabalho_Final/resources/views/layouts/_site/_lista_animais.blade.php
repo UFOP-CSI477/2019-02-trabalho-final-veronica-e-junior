@@ -29,7 +29,7 @@
 	<br>
 	@include('layouts._site._filtros')
 <!--</div>
-<div class="row section">-->
+<div class="row section"> -->
 @foreach($animais as $animal)	
 	<div class="col s12 m3">
 		<div class="card">

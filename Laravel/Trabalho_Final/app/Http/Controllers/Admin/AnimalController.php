@@ -37,7 +37,18 @@ class AnimalController extends Controller
         $animal->cidade = $dados['cidade'];
         $animal->estado = $dados['estado'];
         $animal->cep = $dados['cep'];
+         $file = $request->file('imagem');
+        if($file){
+            $rand = rand(11111,99999);
+            $diretorio = "img/animais/".str_slug($dados['nome'],'_')."/";
+            $ext = $file->guessClientExtension();
+            $nomeArquivo = "_img_".$rand.".".$ext;
+            $file->move($diretorio,$nomeArquivo);
+            $registro->imagem = $diretorio.'/'.$nomeArquivo;
+        }
+
         $animal->save();
+         \Session::flash('mensagem',['msg'=>'Animal cadastrado para adoção com sucesso!','class'=>'green white-text']);
         return redirect()->route('admin.perfil');
     }
 

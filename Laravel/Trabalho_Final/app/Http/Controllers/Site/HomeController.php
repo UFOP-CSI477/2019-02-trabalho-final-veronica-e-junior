@@ -14,10 +14,9 @@ class HomeController extends Controller
 
 	public function index()
     {
-    	$animais = Animal::All();
+    	$animais = Animal::all();
     	//$slides = Slide::where('publicado','=','sim')->orderBy('ordem')->get();
     	//$direcaoImagem = ['center-align','left-align','right-align'];
-    	$paginacao = true;
 
     	return view('site.home',compact('animais'));
     }
