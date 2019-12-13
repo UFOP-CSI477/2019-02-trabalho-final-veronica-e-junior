@@ -62,4 +62,23 @@ class AnimalController extends Controller
         return view('admin.meusAnimais', compact('animais'));
     }
 
+    public function pedidos(){
+        $usuarioID = auth()->user()->id;
+        $animais = DB::table('adotars')
+            ->where('user_dono_id', '=', $usuarioID)
+            ->get();
+            //dd($animais);
+
+        return view('admin.pedidos', compact('animais'));
+    }
+
+    public function meusPedidos(){
+        $usuarioID = auth()->user()->id;
+        $animais = DB::table('adotars')
+            ->where('user_pedinte_id', '=', $usuarioID)
+            ->get();
+            //dd($animais);
+        return view('admin.meus_pedidos', compact('animais'));
+    }
+
 }
