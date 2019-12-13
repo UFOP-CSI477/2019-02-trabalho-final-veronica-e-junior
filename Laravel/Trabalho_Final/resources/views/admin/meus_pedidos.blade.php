@@ -5,6 +5,7 @@
     <div class="container">
         <div class="row">
         <h3>Animais que você pediu em adoção</h3>
+        <h6>a tabela mostra os animais que vc quer adotar</h6>
         <table>
         <thead>
           <tr>
@@ -18,7 +19,7 @@
             @foreach($animais as $animal)
                 <tr scope="row">
                     <td>{{$animal->id}}</td>
-                    <td>{{$animal->nome}}</td>
+                    <td>{{$animal->animal_nome}}</td>
                     seria interessante add um atributo chamado status na nossa tabela adota, 
                     que ai apareceria (em espera) ou algo do tipo pra pessoa que ta pedindo adoção
                 </tr>

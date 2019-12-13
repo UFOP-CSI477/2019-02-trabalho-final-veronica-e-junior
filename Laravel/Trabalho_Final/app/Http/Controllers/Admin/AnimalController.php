@@ -66,6 +66,9 @@ class AnimalController extends Controller
         $usuarioID = auth()->user()->id;
         $animais = DB::table('adotars')
             ->where('user_dono_id', '=', $usuarioID)
+            ->join('users', 'adotars.user_pedinte_id', '=', 'users.id')
+            //->join('animals', 'adotars.animal_id', '=', 'animals.id')
+            ->select('adotars.*', 'users.name as pedinte_nome')//, 'animals.nome as al_nome') //, 'professors.area') animal_id
             ->get();
             //dd($animais);
 
@@ -76,6 +79,8 @@ class AnimalController extends Controller
         $usuarioID = auth()->user()->id;
         $animais = DB::table('adotars')
             ->where('user_pedinte_id', '=', $usuarioID)
+            ->join('animals', 'adotars.animal_id', '=', 'animals.id')
+            ->select('adotars.*', 'animals.nome as animal_nome')
             ->get();
             //dd($animais);
         return view('admin.meus_pedidos', compact('animais'));
