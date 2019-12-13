@@ -14,8 +14,10 @@
             </div>
             <div class="card-content">
                 <p><b class="deep-orange-text darken-1">
-                <p><b>{{ $animal->nome }}</b></p>
+                <h3><p><b>{{ $animal->nome }}</b></p></h3>
                 <p>{{ $animal->descricao }}</p>
+                <p>{{$animal->cidade}}</p>
+                <p>{{$animal->estado}}</p>
             </div>
         </div>
     </div>       
