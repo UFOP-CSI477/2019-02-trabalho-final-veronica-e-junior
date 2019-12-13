@@ -26,7 +26,7 @@ class AnimalController extends Controller
 
     public function salvarAnimal(Request $request ){
         $dados = $request->all();
-        //dd($dados);
+        dd($dados);
         
         $animal = new Animal();
         $animal->user_dono_id = $dados['id'];
@@ -47,7 +47,7 @@ class AnimalController extends Controller
             $registro->imagem = $diretorio.'/'.$nomeArquivo;
         }
 
-        $animal->save();
+       // $animal->save();
          \Session::flash('mensagem',['msg'=>'Animal cadastrado para adoção com sucesso!','class'=>'green white-text']);
         return redirect()->route('admin.perfil');
     }

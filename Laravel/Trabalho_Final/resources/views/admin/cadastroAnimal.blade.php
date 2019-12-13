@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <form action="{{route('admin.salvar-animal')}}" method="POST" class = "form-field">
+        <form action="{{route('admin.salvar-animal')}}" method="POST" enctype="multipart/form-data" class = "form-field">
             {{csrf_field()}}
 
             <div class="input-field">
