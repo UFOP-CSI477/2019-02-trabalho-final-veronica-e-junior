@@ -7,7 +7,7 @@
 	<div class="col s12 m3">
 		<div class="card">
 			<div class="card-image">
-				<img src="{{ asset($final->imagem) }}"></a>
+				<img src="{{ asset($final->imagem) }}" alt="{{ $final->id }}"></a>
 			</div>
 			<div class="card-content">
 				<p><b class="deep-orange-text darken-1"></b></p>

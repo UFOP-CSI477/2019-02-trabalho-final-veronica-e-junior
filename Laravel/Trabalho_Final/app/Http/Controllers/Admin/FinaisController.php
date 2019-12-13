@@ -4,18 +4,19 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Finais;
 
 class FinaisController extends Controller
 {
      public function cadastrarFinal(){
-        return view('admin.cadastroAnimal');
+        return view('admin.cadastroFinal');
     }
 
     public function salvarFinal(Request $request ){
         $dados = $request->all();
         //dd($dados);
         
-        $final = new Final();
+        $final = new Finais();
         $final->descricao = $dados['descricao'];
          $file = $request->file('imagem');
         if($file){

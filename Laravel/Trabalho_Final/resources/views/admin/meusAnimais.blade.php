@@ -19,6 +19,7 @@
                     <td>{{$animal->id}}</td>
                     <td>{{$animal->nome}}</td>
                     <td><a class="btn orange" href="{{ route('admin.editar-animal',$animal->id) }}">Editar</a></</td>
+                     <td><a class="btn red" href="">Deletar</a></</td>
                 </tr>
             @endforeach
         </tbody>
@@ -26,3 +27,11 @@
     </div>
 
 @endsection
+
+
+<?php
+
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+

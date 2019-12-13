@@ -4,20 +4,16 @@ namespace App\Http\Controllers\Site;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Finais_Felizes;
+use App\Finais;
 
 class FinaisController extends Controller
 {
-        public function index($id)
+       public function index()
     {
-    	  	$finais = Finais_Felizes::find($id);
+    	$finais = Finais::all();
+    	//$slides = Slide::where('publicado','=','sim')->orderBy('ordem')->get();
+    	//$direcaoImagem = ['center-align','left-align','right-align'];
 
-    	$seo = [
-			'descricao'=>$finais->descricao,
-			'imagem'=>asset($finais->imagem),
-    	];
-
-
-    	return view('finaisfelizes',compact('finais','seo'));
+    	return view('site.finais',compact('finais'));
     }
 }
