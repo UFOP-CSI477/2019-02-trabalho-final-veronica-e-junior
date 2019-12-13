@@ -26,6 +26,9 @@ Route::get('admin/login', ['as'=>'admin.login', function(){
 }]);
 Route::post('admin/login', ['as'=>'admin.login', 'uses'=>'Admin\UsuarioController@login']);
 
+//rota sair
+Route::get('/admin/login/sair',['as'=>'admin.login.sair', 'uses'=>'Admin\UsuarioController@sair']);
+
 //rota perfil
 Route::get('admin/perfil', ['as'=>'admin.perfil', 'uses'=>'Admin\UsuarioController@perfil']);
 

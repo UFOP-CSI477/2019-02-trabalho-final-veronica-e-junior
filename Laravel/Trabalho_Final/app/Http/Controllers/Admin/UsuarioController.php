@@ -42,4 +42,10 @@ class UsuarioController extends Controller
         return redirect()->route('admin.login');
     }
 
+      public function sair()
+    {
+        Auth::logout();
+        return redirect()->route('admin.login');
+    }
+
 }

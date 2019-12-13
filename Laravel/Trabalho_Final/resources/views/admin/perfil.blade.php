@@ -17,6 +17,10 @@
             <button type="submit"class="btn blue"> 
                  <a class="grey-text text-lighten-3" href="{{route('admin.meus-pedidos')}}">Suas Adoções</a>
             </button>
+
+              <button type="submit"class="btn blue"> 
+                 <a class="grey-text text-lighten-3" href="{{route('admin.login.sair')}}">Sair</a>
+            </button>
         </div>
         <br><br><br><br>
         <br><br><br><br><br>
