@@ -68,7 +68,7 @@ class AnimalController extends Controller
             ->where('user_dono_id', '=', $usuarioID)
             ->join('users', 'adotars.user_pedinte_id', '=', 'users.id')
             //->join('animals', 'adotars.animal_id', '=', 'animals.id')
-            ->select('adotars.*', 'users.name as pedinte_nome')//, 'animals.nome as al_nome') //, 'professors.area') animal_id
+            ->select('adotars.*', 'users.name as pedinte_nome', 'email')//, 'animals.nome as al_nome') //, 'professors.area') animal_id
             ->get();
             //dd($animais);
 
