@@ -27,7 +27,7 @@
                     <td>{{$animal->email}}</td>
                     <td>{{$animal->animal_id}}</td>
                     <td>{{$animal->animal_nome}}</td>
-                    <td>  <a class="btn green" href="{{ route('admin.animal.finalizaradocao',$animal->id) }}">Permitir adoção</a></td>
+                    <td>  <a class="btn green" href="{{ route('admin.animal.finalizaradocao',$animal->animal_id) }}">Permitir adoção</a></td>
                 </tr>
             @endforeach 
         </tbody>
