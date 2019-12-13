@@ -22,7 +22,7 @@
                     <td>{{$animal->id}}</td>
                     <td>{{$animal->pedinte_nome}}</td>
                     <td>{{$animal->email}}</td>
-                    colocar o email de quem ta pedindo pra adotar
+                    <td>  <a class="btn green" href="{{ route('admin.animal.finalizaradocao',$animal->id) }}">Permitir adoção</a></td>
                 </tr>
             @endforeach 
         </tbody>

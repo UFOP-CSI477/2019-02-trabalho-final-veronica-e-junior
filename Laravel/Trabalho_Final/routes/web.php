@@ -58,3 +58,7 @@ Route::get('admin/pedidos', ['as'=>'admin.pedidos', 'uses'=>'Admin\AnimalControl
 
 //rota para os pedidos de adoção do usuario
 Route::get('admin/meus-pedidos', ['as'=>'admin.meus-pedidos', 'uses'=>'Admin\AnimalController@meusPedidos']);
+
+//permitir adoção
+
+Route::get('admin/permitir', ['as'=>'admin.animal.finalizaradocao', 'uses'=>'Admin\AnimalController@finalizar']);
