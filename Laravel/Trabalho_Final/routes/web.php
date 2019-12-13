@@ -46,3 +46,6 @@ Route::get('admin/meus-animais', ['as'=>'admin.meus-animais', 'uses'=>'Admin\Ani
 
 //rota para animal
 Route::get('/animal/{id}/{nome}',['as'=>'site.animal', 'uses'=>'Site\AnimalController@index']);
+
+//pede adoção
+Route::get('admin/pede-adocao', ['as'=>'admin.pedir-adocao', 'uses'=>'Admin\AdotarController@salvar']);

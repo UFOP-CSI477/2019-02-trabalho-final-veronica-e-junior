@@ -4,14 +4,13 @@ namespace App\Http\Controllers\Site;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Animal;
 
 class AnimalController extends Controller
 {
    public function index($id)
     {
     	$animal = Animal::find($id);
-    	//$galeria = $animal->galeria()->orderBy('ordem')->get();
-    	//$direcaoImagem = ['center-align','left-align','right-align'];
 
     	$seo = [
     		'nome'=>$animal->nome,
