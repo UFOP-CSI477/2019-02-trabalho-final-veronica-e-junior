@@ -63,7 +63,7 @@ class AdotarController extends Controller
         Animal::find($animal)->delete();
         Adotar::find($dados)->delete(); 
         
-        return redirect()->route('admin.pedidos');
+        return redirect()->route('admin.cadastrar-final');
 
         //Precisa deletar de animais agora
 

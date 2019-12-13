@@ -14,6 +14,9 @@
 Route::get('/',['as'=>'site.home', 'uses'=>'Site\HomeController@index']);
 
 
+Route::get('/admin/finaisfelizes', ['as'=>'site.finais', 'uses'=>'Site\FinaisController@index']);
+
+
 
 Route::post('/busca',['as'=>'site.busca', 'uses'=>'Site\HomeController@busca']);
 
