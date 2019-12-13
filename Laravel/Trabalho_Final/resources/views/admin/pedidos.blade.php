@@ -11,6 +11,7 @@
           <tr>
               <th>ID</th>
               <th>Nome</th>
+              <th>E-mail</th>
           </tr>
         </thead>
 
@@ -20,6 +21,7 @@
                 <tr scope="row">
                     <td>{{$animal->id}}</td>
                     <td>{{$animal->pedinte_nome}}</td>
+                    <td>{{$animal->email}}</td>
                     colocar o email de quem ta pedindo pra adotar
                 </tr>
             @endforeach 
