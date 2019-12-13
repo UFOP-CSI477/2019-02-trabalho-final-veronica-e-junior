@@ -60,5 +60,4 @@ Route::get('admin/pedidos', ['as'=>'admin.pedidos', 'uses'=>'Admin\AnimalControl
 Route::get('admin/meus-pedidos', ['as'=>'admin.meus-pedidos', 'uses'=>'Admin\AnimalController@meusPedidos']);
 
 //permitir adoção
-
-Route::get('admin/permitir', ['as'=>'admin.animal.finalizaradocao', 'uses'=>'Admin\AnimalController@finalizar']);
+Route::get('admin/permitir/{id}', ['as'=>'admin.animal.finalizaradocao', 'uses'=>'Admin\AdotarController@finalizar']);

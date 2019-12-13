@@ -12,6 +12,9 @@
               <th>ID</th>
               <th>Nome</th>
               <th>E-mail</th>
+              <th>Id Animal</th>
+              <th>Nome Animal</th>
+              <th><th>
           </tr>
         </thead>
 
@@ -22,6 +25,8 @@
                     <td>{{$animal->id}}</td>
                     <td>{{$animal->pedinte_nome}}</td>
                     <td>{{$animal->email}}</td>
+                    <td>{{$animal->animal_id}}</td>
+                    <td>{{$animal->animal_nome}}</td>
                     <td>  <a class="btn green" href="{{ route('admin.animal.finalizaradocao',$animal->id) }}">Permitir adoção</a></td>
                 </tr>
             @endforeach 
