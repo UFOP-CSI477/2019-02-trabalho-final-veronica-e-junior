@@ -18,6 +18,7 @@
                 <tr scope="row">
                     <td>{{$animal->id}}</td>
                     <td>{{$animal->nome}}</td>
+                    <td><a class="btn orange" href="{{ route('admin.editar-animal',$animal->id) }}">Editar</a></</td>
                 </tr>
             @endforeach
         </tbody>

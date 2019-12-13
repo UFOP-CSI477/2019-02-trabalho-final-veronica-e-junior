@@ -69,3 +69,6 @@ Route::get('/finaisfelizes',['as'=>'finais.felizes', 'uses'=>'Site\FinaisControl
 
 Route::get('admin/permitir/{id}', ['as'=>'admin.animal.finalizaradocao', 'uses'=>'Admin\AdotarController@finalizar']);
 
+Route::get('admin/editar-animal/{id}', ['as'=>'admin.editar-animal', 'uses'=>'Admin\AnimalController@editar']);
+
+Route::post('admin/atualizar-animal/{id}', ['as'=>'admin.atualizar-animal', 'uses'=>'Admin\AnimalController@atualizar']);

@@ -7,19 +7,17 @@
 	 	<nav>
 		    <div class="nav-wrapper green">
 		      	<div class="col s12">
-			        <a href="{{ route('admin.principal')}}" class="breadcrumb">Início</a>
-			        <a href="{{route('admin.imoveis')}}" class="breadcrumb">Lista de Imóveis</a>
 			        <a class="breadcrumb">Editar Animal</a>
 		      	</div>
 		    </div>
 	  	</nav>
 	</div>
 	<div class="row">
-		<form action="{{ route('admin.imoveis.atualizar',$registro->id) }}" method="post" enctype="multipart/form-data">
+		<form action="{{ route('admin.atualizar-animal',$animal->id) }}" method="post" enctype="multipart/form-data">
 
 		{{csrf_field()}}
 		<input type="hidden" name="_method" value="put">
-		@include('admin.imoveis._form')
+		@include('admin.cadastroAnimal')
 
 		<button class="btn blue">Atualizar</button>
 

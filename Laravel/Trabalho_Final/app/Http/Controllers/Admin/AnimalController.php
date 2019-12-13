@@ -91,4 +91,44 @@ class AnimalController extends Controller
         return redirect()->route('admin.cadastrarfinaisfelizes');
     }
 
+     public function editar($id)
+    {
+        $animais = Animal::find($id);
+
+
+        return view('admin.editar',compact('animais'));
+        
+    }
+
+    public function atualizar(Request $request, $id)
+    {
+        $animal = Animal::find($id);
+        $dados = $request->all();
+
+        $animal->user_dono_id = $dados['id'];
+        $animal->especie = $dados['especie'];
+        $animal->sexo = $dados['sexo'];
+        $animal->nome = $dados['nome'];
+        $animal->descricao = $dados['descricao'];
+        $animal->cidade = $dados['cidade'];
+        $animal->estado = $dados['estado'];
+        $animal->cep = $dados['cep'];
+         $file = $request->file('imagem');
+        if($file){
+            $rand = rand(11111,99999);
+            $diretorio = "img/animais/".str_slug($dados['nome'],'_')."/";
+            $ext = $file->guessClientExtension();
+            $nomeArquivo = "_img_".$rand.".".$ext;
+            $file->move($diretorio,$nomeArquivo);
+            $animal->imagem = $diretorio.'/'.$nomeArquivo;
+        }
+
+        
+        $animal ->update();
+
+        \Session::flash('mensagem',['msg'=>'Atualizado com sucesso!','class'=>'green white-text']);
+
+        return redirect()->route('admin.perfil');
+    }
+
 }
