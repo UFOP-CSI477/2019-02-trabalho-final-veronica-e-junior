@@ -88,7 +88,8 @@ class AnimalController extends Controller
 
     public function finalizar($id){
            Animal::find($id)->delete();
-        return redirect()->route('admin.cadastrar-final');
+       // return redirect()->route('admin.cadastrar-final');
+           return view('admin.casdastroFinal');
     }
 
      public function editar($id)
