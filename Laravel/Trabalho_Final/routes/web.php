@@ -77,4 +77,4 @@ Route::get('admin/permitir/{id}/{animal_id}', ['as'=>'admin.animal.finalizaradoc
 
 Route::get('admin/editar-animal/{id}', ['as'=>'admin.editar-animal', 'uses'=>'Admin\AnimalController@editar']);
 
-Route::post('admin/atualizar-animal/{id}', ['as'=>'admin.atualizar-animal', 'uses'=>'Admin\AnimalController@atualizar']);
+Route::put('admin/atualizar-animal/{id}', ['as'=>'admin.atualizar-animal', 'uses'=>'Admin\AnimalController@atualizar']);

@@ -94,10 +94,10 @@ class AnimalController extends Controller
 
      public function editar($id)
     {
-        $animais = Animal::find($id);
+        $registro = Animal::find($id);
 
-
-        return view('admin.editar',compact('animais'));
+       // dd($registro);
+        return view('admin.editar',compact('registro'));
         
     }
 
